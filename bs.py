@@ -21,7 +21,7 @@ ID  = 1
 
 print("curr success")
 
-path = "C:\\Users\\Asus\\Desktop\\chromedriver.exe"
+path = "chromedriver.exe"
 data = []
 meta_data = []
 compitior = []
