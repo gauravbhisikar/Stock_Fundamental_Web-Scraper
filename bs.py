@@ -13,11 +13,12 @@ import psycopg2
 import sqlalchemy
 
 engine = sqlalchemy.create_engine('postgresql://postgres:1234@localhost:5432/fundamentals')
-#connection  = psycopg2.connect(database = "fundamentals",user = "postgres", password = "1234", host = "127.0.0.1", port = "5432")
+username = 'Your_username'
+password = 'Your_password'
 print("Database Opened Successfuly")
 Ticker = "JUSTDIAL"
 ID  = 1
-#cur = connection.cursor()
+
 print("curr success")
 
 path = "C:\\Users\\Asus\\Desktop\\chromedriver.exe"
@@ -36,9 +37,9 @@ url = "https://www.screener.in/login/"
 driver.get(url)
 print(driver.title)
 username = driver.find_element_by_id("id_username")
-username.send_keys("joncorner1000@gmail.com")
+username.send_keys(username)
 password = driver.find_element_by_id("id_password")
-password.send_keys("7p.ReT8-WKh.ULm")
+password.send_keys(password)
 password.send_keys(Keys.RETURN)
 driver.get(f'https://www.screener.in/company/{Ticker}/consolidated/')
 time.sleep(1)
