@@ -26,6 +26,7 @@ class Stock_Data():
 		self.password = password
 		self.database_name = database_name
 		self.port = port
+		self.index = -1
 		try:
 			self.engine = sqlalchemy.create_engine(f'postgresql://{self.username}:{self.password}@{host}:{self.port}/{self.database_name}')
 			print("Engine Created")
@@ -149,6 +150,7 @@ class Stock_Data():
 						driver.close()
 						self.Data = Data
 						self.Status = 'Working'
+						self.index += 1
 						return Data
 
 					except Exception as e:
@@ -161,11 +163,11 @@ class Stock_Data():
 
 
 
-	def send_to_db(self,index):
+	def send_to_db(self):
 		if self.Status == 'Working':
 				try:
-					df  = pd.DataFrame(self.Data, index=[index])
-					df.rename(columns = {'Ticker':'TICKER','Market_Cap':'c_mc','Current_Price':'c_cp','52week_High':'c_52h',
+					df  = pd.DataFrame(self.Data, index=[self.index])
+					df.rename(columns = {'Ticker':'ticker','Market_Cap':'c_mc','Current_Price':'c_cp','52week_High':'c_52h',
 								'52week_Low':'c_52l','Book_Value':'c_bv','Stock_P/E':'c_pe','Dividend_Yield':'c_dy',
 								'ROCE':'c_roce','ROE':'c_roe','Sales_Growth(3Yrs)':'c_sg3','Face_Value':'c_fv',
 								'Return_on_assets':'c_roa','Asset_Turnover_Ratio':'c_atr', 'PB_value':'c_pbv', 
@@ -185,7 +187,7 @@ class Stock_Data():
 							},inplace = True)
 
 					#print(df.head())
-					df.to_sql(name = 'fundamental_data',con = self.engine,if_exists ='append')
+					df.to_sql(name = 'stock_fundamentals',con = self.engine,if_exists ='append')
 
 					print(f"Data of Ticker {self.Ticker} was Successfuly commited")
 
