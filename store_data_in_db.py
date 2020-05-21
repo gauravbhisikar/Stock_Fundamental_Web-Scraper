@@ -59,7 +59,7 @@ TICKERS = ['AARTIIND', 'AAVAS', 'ABBOTINDIA', 'ABCAPITAL', 'ABFRL', 'ACC', 'ADAN
 		    'WELCORP', 'WELSPUNIND', 'WESTLIFE', 'WHIRLPOOL', 'WIPRO', 'WOCKPHARMA', 'ZEEL', 'ZENSARTECH', 'ZYDUSWELL']
 
 index = 0
-TICKERS = ['AARTIIND', 'AAVAS', 'ABBOTINDIA']
+
 for i in TICKERS:
 	test.get_fundamental_data(i)
 	test.send_to_db(index)
