@@ -2,8 +2,8 @@ from stock_data import *
 
 
 
-username 	= "joncorner1000@gmail.com"
-password 	= "7p.ReT8-WKh.ULm"
+username 	= "YOUR_USERNAME"
+password 	= "YOUR_PASSWORD"
 db_name  	= "fundamentals"
 db_usename 	= "postgres"
 db_password = "1234"
@@ -14,7 +14,7 @@ NIFTY50  = ['PAGEIND', 'PETRONET', 'PIDILITIND', 'PEL']
 
 
 test = Stock_Data(username,password,db_usename,db_password,host,db_name)
-"""
+
 TICKERS = ['AARTIIND', 'AAVAS', 'ABBOTINDIA', 'ABCAPITAL', 'ABFRL', 'ACC', 'ADANIGAS', 'ADANIGREEN',
 		 	'ADANIPORTS', 'ADANIPOWER', 'ADANITRANS', 'ADVENZYMES', 'AEGISCHEM', 'AFFLE', 'AIAENG', 'AJANTPHARM',
 		 	'AKZOINDIA', 'ALKEM', 'ALLCARGO', 'AMARAJABAT', 'AMBER', 'AMBUJACEM', 'APLAPOLLO', 'APLLTD', 'APOLLOHOSP',
@@ -57,7 +57,7 @@ TICKERS = ['AARTIIND', 'AAVAS', 'ABBOTINDIA', 'ABCAPITAL', 'ABFRL', 'ACC', 'ADAN
 		    'TORNTPOWER', 'TRENT', 'TRIDENT', 'TRITURBINE', 'TTKPRESTIG', 'TV18BRDCST', 'TVSMOTOR', 'TVTODAY', 'UBL', 'UCOBANK', 'UFLEX', 'UJJIVAN', 'ULTRACEMCO', 'UNIONBANK', 
 		    'UPL', 'VAIBHAVGBL', 'VAKRANGEE', 'VARROC', 'VBL', 'VEDL', 'VENKEYS', 'VGUARD', 'VINATIORGA', 'VIPIND', 'VMART', 'VOLTAS', 'VRLLOG', 'VSTIND', 'VTL', 'WABAG', 'WABCOINDIA', 
 		    'WELCORP', 'WELSPUNIND', 'WESTLIFE', 'WHIRLPOOL', 'WIPRO', 'WOCKPHARMA', 'ZEEL', 'ZENSARTECH', 'ZYDUSWELL']
-"""
+
 index = 0
 TICKERS = ['AARTIIND', 'AAVAS', 'ABBOTINDIA']
 for i in TICKERS:
