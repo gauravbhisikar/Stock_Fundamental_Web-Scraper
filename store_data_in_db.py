@@ -6,8 +6,8 @@ import pandas as pd
 
 
 
-username 	= "joncorner1000@gmail.com"
-password 	= "7p.ReT8-WKh.ULm"
+username 	= "Your_Screener_Username"
+password 	= "Your_Screener_Password"
 db_name  	= "fundamentals"
 db_usename 	= "postgres"
 db_password = "1234"
