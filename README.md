@@ -1,7 +1,8 @@
 # Stock_Fundamental_Web-Scraper
 ### I created a simple web scraper which scrapes latest fundamental data for NIFTY-500 Stocks and store them into PSQL database 
 ## Prerequisites
-### 1.[screener.in ](https://www.screener.in/)account
+### Python>3.6
+### [screener.in ](https://www.screener.in/)account
 ### 2.You need set all the ratios in your account exactly as given below:
 ![screener](https://user-images.githubusercontent.com/32850887/83355606-23336900-a37e-11ea-81d5-af063408b518.png)
 #  Quickstart
